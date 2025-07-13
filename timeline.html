@@ -506,29 +506,36 @@
                 font-size: 2.8em;
             }
 
+            /* Mobile: Remove timeline line and use full-width cards */
             .timeline::before {
-                left: 30px;
+                display: none;
             }
 
             .timeline-item:nth-child(odd) .timeline-content,
             .timeline-item:nth-child(even) .timeline-content {
-                margin-left: 80px;
+                margin-left: 0;
                 margin-right: 0;
                 text-align: left;
+                margin-bottom: 60px;
+                position: relative;
             }
 
+            /* Mobile: Position date and icon at top of each card */
             .timeline-item:nth-child(odd) .achievement-icon,
             .timeline-item:nth-child(even) .achievement-icon {
-                left: 30px;
-                top: 20%;
-                transform: translate(-50%, -50%);
+                position: absolute;
+                top: -25px;
+                left: 20px;
+                transform: none;
             }
 
             .timeline-item:nth-child(odd) .date-badge,
             .timeline-item:nth-child(even) .date-badge {
-                left: 30px;
-                top: 60%;
-                transform: translate(-50%, -50%);
+                position: absolute;
+                top: -25px;
+                right: 20px;
+                left: auto;
+                transform: none;
             }
 
             .stats {
@@ -568,6 +575,21 @@
 
             .carousel-next {
                 right: 10px;
+            }
+            
+            /* Mobile: Add more padding to timeline content */
+            .timeline-content {
+                padding: 50px 20px 30px !important;
+                margin-top: 30px;
+            }
+            
+            /* Mobile: Ensure gallery section has good spacing */
+            .gallery-section {
+                padding: 40px 20px;
+            }
+            
+            .timeline-section {
+                padding: 40px 20px;
             }
         }
 
