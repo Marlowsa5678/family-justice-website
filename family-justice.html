@@ -28,6 +28,11 @@ Vimeo:
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://michaelvolpe.com/family-justice">
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -36,15 +41,21 @@ Vimeo:
         }
         
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #18121E;
             background: #fafafa;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
         }
         
         /* Navigation - Matches main site */
         .navbar {
-            background: #1a1a1a;
+            background: #18121E;
             padding: 1rem 0;
             position: fixed;
             width: 100%;
@@ -84,7 +95,7 @@ Vimeo:
         
         .nav-menu a:hover,
         .nav-menu a.active {
-            color: #e74c3c;
+            color: #984B43;
         }
         
         .mobile-menu-toggle {
@@ -104,7 +115,7 @@ Vimeo:
         }
         
         .header {
-            background: linear-gradient(135deg, #2c3e50, #3498db);
+            background: linear-gradient(135deg, #233237, #4682B4);
             color: white;
             text-align: center;
             padding: 40px 20px;
@@ -243,17 +254,22 @@ Vimeo:
         }
         
         .email-form button {
-            background: #e74c3c;
+            background: #984B43;
             color: white;
             border: none;
             padding: 12px 20px;
             border-radius: 5px;
-            font-weight: bold;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
             cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(152, 75, 67, 0.3);
         }
         
         .email-form button:hover {
-            background: #c0392b;
+            background: #7a3b35;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(152, 75, 67, 0.4);
         }
         
         .section {
@@ -265,24 +281,33 @@ Vimeo:
         }
         
         .section h2 {
-            color: #2c3e50;
+            color: #233237;
             margin-bottom: 15px;
             font-size: 1.8em;
         }
         
         .cta-big {
-            background: #e74c3c;
+            background: #984B43;
             color: white;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
             font-size: 1.3em;
-            font-weight: bold;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
             margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(152, 75, 67, 0.3);
+            transition: all 0.3s;
+        }
+        
+        .cta-big:hover {
+            background: #7a3b35;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(152, 75, 67, 0.4);
         }
         
         .back-link {
-            background: #34495e;
+            background: #697181;
             color: white;
             padding: 10px 20px;
             border-radius: 5px;
@@ -290,10 +315,12 @@ Vimeo:
             display: inline-block;
             margin-bottom: 20px;
             transition: background 0.3s;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
         }
         
         .back-link:hover {
-            background: #2c3e50;
+            background: #5a606f;
         }
         
         .find-reps {
@@ -304,7 +331,7 @@ Vimeo:
         }
         
         .find-reps a {
-            color: #e74c3c;
+            color: #984B43;
             font-weight: bold;
             text-decoration: none;
         }
@@ -315,7 +342,7 @@ Vimeo:
         
         /* Footer - Matches main site */
         .footer {
-            background: #1a1a1a;
+            background: #18121E;
             color: white;
             text-align: center;
             padding: 2rem 0;
@@ -336,7 +363,7 @@ Vimeo:
         }
         
         .footer-links a:hover {
-            color: #e74c3c;
+            color: #984B43;
         }
         
         /* Scroll to Top Button */
@@ -346,7 +373,7 @@ Vimeo:
             right: 20px;
             width: 50px;
             height: 50px;
-            background: #e74c3c;
+            background: #984B43;
             color: white;
             border: none;
             border-radius: 50%;
@@ -355,13 +382,13 @@ Vimeo:
             display: none;
             z-index: 999;
             transition: all 0.3s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 10px rgba(152, 75, 67, 0.3);
         }
         
         #scrollToTop:hover {
-            background: #c0392b;
+            background: #7a3b35;
             transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+            box-shadow: 0 6px 15px rgba(152, 75, 67, 0.4);
         }
         
         @media (max-width: 600px) {
@@ -512,7 +539,7 @@ Sincerely,
             <div class="find-reps">
                 <strong>🔍 Find your representatives:</strong><br>
                 <a href="https://www.congress.gov/members/find-your-member" target="_blank">Find Federal Representatives</a> | 
-                <a href="https://www.ncsl.org/legislators-and-elections/find-your-legislator" target="_blank">Find State Legislators</a>
+                <a href="https://www.congress.gov/state-legislature-websites" target="_blank">Find State Legislators</a>
             </div>
         </div>
 
@@ -550,8 +577,8 @@ Sincerely,
         <div class="section">
             <h2>📧 Contact Michael Volpe</h2>
             <p>Have a story about family court corruption in your state? Want to get involved in organizing a committee? Reach out:</p>
-            <p><strong>Email:</strong> <a href="mailto:contact@michaelvolpe.com" style="color: #e74c3c;">contact@michaelvolpe.com</a></p>
-            <p><strong>Substack:</strong> <a href="https://substack.com/@michaelvolpe" target="_blank" style="color: #e74c3c;">Subscribe for Updates</a></p>
+            <p><strong>Email:</strong> <a href="mailto:contact@michaelvolpe.com" style="color: #984B43;">contact@michaelvolpe.com</a></p>
+            <p><strong>Substack:</strong> <a href="https://substack.com/@michaelvolpe" target="_blank" style="color: #984B43;">Subscribe for Updates</a></p>
         </div>
     </div>
 
