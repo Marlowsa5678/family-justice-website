@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<!-- 
+HOW TO ADD VIDEOS & IMAGES:
+
+VIDEOS:
+YouTube: The ID is after 'v=' in the URL (e.g., youtube.com/watch?v=ABC123 → ID is ABC123)
+Vimeo: The ID is the numbers in the URL (e.g., vimeo.com/123456 → ID is 123456)
+
+IMAGES:
+1. Create a folder called 'images' in your project
+2. Add your images there (e.g., images/michael-volpe.jpg)
+3. Use: <img src="images/your-image.jpg" alt="Description">
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -374,6 +386,31 @@
             color: #e74c3c;
         }
         
+        /* Scroll to Top Button */
+        #scrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        
+        #scrollToTop:hover {
+            background: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+        }
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             .mobile-menu-toggle {
@@ -481,19 +518,23 @@
                     <p><strong>This is part of a growing national movement:</strong> Arizona has already conducted multiple hearings, leading to real reforms. Idaho just held their first. Which state will be next?</p>
                     <a href="family-justice.html" class="cta-button">Join the Movement</a>
                 </div>
-                <div class="video-placeholder">
-                    <h4>🎥 Featured Investigation</h4>
-                    <p>Veronica Baiz Testimony</p>
-                    <p>Idaho Public Hearing</p>
-                    <!-- Replace with actual embed: -->
-                    <!-- <iframe width="100%" height="300" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe> -->
+                <!-- YouTube Video Embed -->
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                    <iframe 
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                        src="https://www.youtube.com/embed/oRqEUScH3O8" 
+                        title="Veronica Baiz Testimony - Idaho Public Hearing"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Recent Stories -->
-    <section class="section" id="stories">
+    <section class="section" id="stories" style="position: relative;">
         <div class="container">
             <h2>Recent Investigations</h2>
             <div class="stories-grid">
@@ -530,16 +571,19 @@
             <h2>Published Books</h2>
             <div class="books-grid">
                 <div class="book-card">
+                    <img src="images/prosecutorsgonewild_book_cover.jpeg" alt="Prosecutors Gone Wild Book Cover" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
                     <h3>"Prosecutors Gone Wild"</h3>
                     <p>The Inside Story of the Trial of Chuck Panici, John Gliottoni, and Louise Marshall. An exposé of prosecutorial misconduct and corruption within the justice system.</p>
                 </div>
                 
                 <div class="book-card">
+                    <img src="images/thedefinitivedossier_book_cover.jpg" alt="The Definitive Dossier Book Cover" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
                     <h3>"The Definitive Dossier of PTSD in Whistleblowers"</h3>
                     <p>A comprehensive examination of the psychological toll on those who dare to speak truth to power, documenting the systematic trauma inflicted on whistleblowers.</p>
                 </div>
                 
                 <div class="book-card">
+                    <img src="images/bulliedtodeath_book_cover.jpg" alt="Bullied to Death Book Cover" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
                     <h3>"Bullied to Death: Chris Mackney's Kafkaesque Divorce"</h3>
                     <p>The tragic story of an individual caught in a contentious divorce and the resulting struggles within a corrupt family court system that ultimately led to devastating consequences.</p>
                 </div>
@@ -599,7 +643,7 @@
             <h2>About Michael Volpe</h2>
             <div class="about-content">
                 <div class="about-image">
-                    [Professional Photo]
+                    <img src="images/michaelvolpe_profile_shot.png" alt="Michael Volpe - Investigative Journalist" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
                 </div>
                 <div>
                     <p><strong>Michael Volpe</strong> is a freelance investigative journalist and author based in Chicago, specializing in exposing court corruption, particularly within the family court system. After working in finance for over a decade, he transitioned to investigative journalism in 2009.</p>
@@ -628,6 +672,9 @@
         </div>
     </section>
 
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" onclick="scrollToTop()" title="Go to top">↑</button>
+
     <!-- Footer -->
     <footer class="footer" id="contact">
         <div class="container">
@@ -645,6 +692,25 @@
         function toggleMobileMenu() {
             const menu = document.getElementById('nav-menu');
             menu.classList.toggle('active');
+        }
+
+        // Scroll to Top Button functionality
+        // Show/hide button based on scroll position
+        window.onscroll = function() {
+            const button = document.getElementById("scrollToTop");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        // Scroll to top when button is clicked
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
 
         // Newsletter form handler

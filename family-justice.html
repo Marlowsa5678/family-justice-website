@@ -1,4 +1,19 @@
 <!DOCTYPE html>
+<!-- 
+HOW TO ADD YOUR VIDEOS:
+
+YouTube:
+1. Go to your YouTube video
+2. Look at the URL: https://www.youtube.com/watch?v=ABC123xyz
+3. The ID is the part after 'v=' (in this example: ABC123xyz)
+4. Replace YOUR_VIDEO_ID with your actual ID
+
+Vimeo:
+1. Go to your Vimeo video  
+2. Look at the URL: https://vimeo.com/123456789
+3. The ID is the numbers (in this example: 123456789)
+4. Replace YOUR_VIDEO_ID with your actual ID
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -324,6 +339,31 @@
             color: #e74c3c;
         }
         
+        /* Scroll to Top Button */
+        #scrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        
+        #scrollToTop:hover {
+            background: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+        }
+        
         @media (max-width: 600px) {
             .mobile-menu-toggle {
                 display: block;
@@ -389,9 +429,12 @@
     <div class="container">
         <a href="index.html" class="back-link">← Back to Main Site</a>
         
-        <div class="header">
-            <h1>🏛️ 50-State Family Justice Movement</h1>
-            <p>Every state needs a Family Court Corruption Committee</p>
+        <div class="header" style="position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; right: -100px; opacity: 0.1; transform: rotate(-15deg);">
+                <img src="images/black_robe_mafia.png" alt="Justice Symbol" style="height: 300px; width: auto;">
+            </div>
+            <h1 style="position: relative; z-index: 1;">🏛️ 50-State Family Justice Movement</h1>
+            <p style="position: relative; z-index: 1;">Every state needs a Family Court Corruption Committee</p>
         </div>
 
         <div class="progress">
@@ -406,12 +449,29 @@
 
         <div class="video-section">
             <h2>Why This Matters: Veronica's Story</h2>
-            <div class="video-placeholder">
-                <h3>🎥 VIDEO: Mom Exposes Family Court Corruption</h3>
-                <p>Idaho Public Hearing - July 7, 2025</p>
-                <!-- Replace with actual embed: -->
-                <!-- <iframe width="100%" height="300" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe> -->
+            <!-- YouTube Video Embed -->
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                    src="https://www.youtube.com/embed/oRqEUScH3O8" 
+                    title="Mom Exposes Family Court Corruption"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
             </div>
+            
+            <!-- OR for Vimeo, use this instead: -->
+            <!-- <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                    src="https://player.vimeo.com/video/YOUR_VIDEO_ID" 
+                    title="Mom Exposes Family Court Corruption"
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div> -->
             <p><strong>This happened in Idaho's FIRST family court corruption hearing.</strong> Arizona has already held multiple days of testimony. The results? Real reforms are happening.</p>
             
             <div class="cta-big">
@@ -495,6 +555,9 @@ Sincerely,
         </div>
     </div>
 
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" onclick="scrollToTop()" title="Go to top">↑</button>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -512,6 +575,25 @@ Sincerely,
         function toggleMobileMenu() {
             const menu = document.getElementById('nav-menu');
             menu.classList.toggle('active');
+        }
+
+        // Scroll to Top Button functionality
+        // Show/hide button based on scroll position
+        window.onscroll = function() {
+            const button = document.getElementById("scrollToTop");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        // Scroll to top when button is clicked
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
 
         function copyToClipboard() {
