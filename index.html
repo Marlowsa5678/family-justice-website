@@ -28,6 +28,11 @@ IMAGES:
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -36,15 +41,21 @@ IMAGES:
         }
         
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #18121E;
             background: #fafafa;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
         }
         
         /* Navigation */
         .navbar {
-            background: #1a1a1a;
+            background: #18121E;
             padding: 1rem 0;
             position: fixed;
             width: 100%;
@@ -84,7 +95,7 @@ IMAGES:
         
         .nav-menu a:hover,
         .nav-menu a.active {
-            color: #e74c3c;
+            color: #984B43;
         }
         
         .mobile-menu-toggle {
@@ -98,7 +109,7 @@ IMAGES:
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            background: linear-gradient(135deg, #233237 0%, #4682B4 100%);
             color: white;
             padding: 120px 0 80px;
             text-align: center;
@@ -124,18 +135,22 @@ IMAGES:
         
         .cta-button {
             display: inline-block;
-            background: #e74c3c;
+            background: #984B43;
             color: white;
             padding: 15px 30px;
             text-decoration: none;
             border-radius: 5px;
             font-size: 1.1rem;
-            font-weight: bold;
-            transition: background 0.3s;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(152, 75, 67, 0.3);
         }
         
         .cta-button:hover {
-            background: #c0392b;
+            background: #7a3b35;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(152, 75, 67, 0.4);
         }
         
         /* Main Content */
@@ -151,7 +166,7 @@ IMAGES:
         
         .section h2 {
             font-size: 2.5rem;
-            color: #2c3e50;
+            color: #233237;
             margin-bottom: 2rem;
             text-align: center;
         }
@@ -171,7 +186,7 @@ IMAGES:
         
         .featured-text h3 {
             font-size: 2rem;
-            color: #e74c3c;
+            color: #984B43;
             margin-bottom: 1rem;
         }
         
@@ -181,7 +196,7 @@ IMAGES:
         }
         
         .video-placeholder {
-            background: #34495e;
+            background: #697181;
             color: white;
             padding: 3rem;
             text-align: center;
@@ -393,7 +408,7 @@ IMAGES:
             right: 20px;
             width: 50px;
             height: 50px;
-            background: #e74c3c;
+            background: #984B43;
             color: white;
             border: none;
             border-radius: 50%;
@@ -402,13 +417,13 @@ IMAGES:
             display: none;
             z-index: 999;
             transition: all 0.3s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 10px rgba(152, 75, 67, 0.3);
         }
         
         #scrollToTop:hover {
-            background: #c0392b;
+            background: #7a3b35;
             transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+            box-shadow: 0 6px 15px rgba(152, 75, 67, 0.4);
         }
         
         /* Responsive Design */
@@ -492,8 +507,12 @@ IMAGES:
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
+    <section class="hero" style="position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 20px; right: -50px; opacity: 0.15; transform: rotate(-10deg); z-index: 1;">
+            <img src="images/solid_metal_lockup.png" alt="Michael Volpe Investigates" style="height: 400px; width: auto;">
+        </div>
+        <div class="hero-container" style="position: relative; z-index: 2;">
+            <img src="images/electric_lockup.png" alt="Michael Volpe Investigates" style="max-width: 300px; height: auto; margin-bottom: 20px; opacity: 0.9;">
             <h1>Investigative Journalist</h1>
             <p>Exposing corruption, uncovering truth, and giving voice to the voiceless</p>
             <a href="#stories" class="cta-button">Read Latest Investigation</a>
@@ -537,30 +556,11 @@ IMAGES:
     <section class="section" id="stories" style="position: relative;">
         <div class="container">
             <h2>Recent Investigations</h2>
-            <div class="stories-grid">
-                <article class="story-card">
-                    <div class="story-card-content">
-                        <h3>Idaho Family Court Hearing Exposes Systemic Corruption</h3>
-                        <p>First public hearing reveals how courts profit from prolonged custody battles...</p>
-                        <div class="story-meta">July 2025 • Family Court Investigation</div>
-                    </div>
-                </article>
-                
-                <article class="story-card">
-                    <div class="story-card-content">
-                        <h3>Arizona's Family Court Reform Success Story</h3>
-                        <p>How multiple days of public testimony led to legislative action...</p>
-                        <div class="story-meta">June 2025 • Government Reform</div>
-                    </div>
-                </article>
-                
-                <article class="story-card">
-                    <div class="story-card-content">
-                        <h3>The National Movement for Family Justice</h3>
-                        <p>State-by-state analysis of family court corruption committees...</p>
-                        <div class="story-meta">May 2025 • Series Investigation</div>
-                    </div>
-                </article>
+            <div class="stories-grid" id="stories-grid">
+                <!-- Stories will be loaded dynamically from Substack -->
+                <div class="loading-stories" style="text-align: center; padding: 40px; grid-column: 1 / -1;">
+                    <p style="color: #697181;">Loading latest investigations from Substack...</p>
+                </div>
             </div>
         </div>
     </section>
@@ -571,19 +571,19 @@ IMAGES:
             <h2>Published Books</h2>
             <div class="books-grid">
                 <div class="book-card">
-                    <img src="images/prosecutorsgonewild_book_cover.jpeg" alt="Prosecutors Gone Wild Book Cover" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
+                    <img src="images/prosecutorsgonewild_book_cover.jpeg" alt="Prosecutors Gone Wild Book Cover" style="width: 100%; height: auto; max-height: 300px; object-fit: contain; border-radius: 5px; margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
                     <h3>"Prosecutors Gone Wild"</h3>
                     <p>The Inside Story of the Trial of Chuck Panici, John Gliottoni, and Louise Marshall. An exposé of prosecutorial misconduct and corruption within the justice system.</p>
                 </div>
                 
                 <div class="book-card">
-                    <img src="images/thedefinitivedossier_book_cover.jpg" alt="The Definitive Dossier Book Cover" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
+                    <img src="images/thedefinitivedossier_book_cover.jpg" alt="The Definitive Dossier Book Cover" style="width: 100%; height: auto; max-height: 300px; object-fit: contain; border-radius: 5px; margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
                     <h3>"The Definitive Dossier of PTSD in Whistleblowers"</h3>
                     <p>A comprehensive examination of the psychological toll on those who dare to speak truth to power, documenting the systematic trauma inflicted on whistleblowers.</p>
                 </div>
                 
                 <div class="book-card">
-                    <img src="images/bulliedtodeath_book_cover.jpg" alt="Bullied to Death Book Cover" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
+                    <img src="images/bulliedtodeath_book_cover.jpg" alt="Bullied to Death Book Cover" style="width: 100%; height: auto; max-height: 300px; object-fit: contain; border-radius: 5px; margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
                     <h3>"Bullied to Death: Chris Mackney's Kafkaesque Divorce"</h3>
                     <p>The tragic story of an individual caught in a contentious divorce and the resulting struggles within a corrupt family court system that ultimately led to devastating consequences.</p>
                 </div>
@@ -767,6 +767,88 @@ IMAGES:
                 }
             });
         });
+
+        // Load Substack Stories
+        async function loadSubstackStories() {
+            try {
+                // Using RSS2JSON service to convert RSS to JSON (CORS-friendly)
+                const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://michaelvolpe.substack.com/feed&count=3');
+                const data = await response.json();
+                
+                if (data.status === 'ok') {
+                    displayStories(data.items);
+                } else {
+                    throw new Error('Failed to load stories');
+                }
+            } catch (error) {
+                console.error('Error loading Substack stories:', error);
+                displayFallbackStories();
+            }
+        }
+
+        function displayStories(stories) {
+            const storiesGrid = document.getElementById('stories-grid');
+            storiesGrid.innerHTML = '';
+            
+            stories.forEach(story => {
+                const pubDate = new Date(story.pubDate);
+                const formattedDate = pubDate.toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long' 
+                });
+                
+                // Extract first paragraph for preview
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = story.description;
+                const firstParagraph = tempDiv.querySelector('p')?.textContent || story.description;
+                const preview = firstParagraph.length > 150 ? 
+                    firstParagraph.substring(0, 150) + '...' : 
+                    firstParagraph;
+                
+                const storyCard = `
+                    <article class="story-card">
+                        <div class="story-card-content">
+                            <h3>${story.title}</h3>
+                            <p>${preview}</p>
+                            <div class="story-meta">${formattedDate} • <a href="${story.link}" target="_blank" style="color: #984B43;">Read on Substack →</a></div>
+                        </div>
+                    </article>
+                `;
+                storiesGrid.innerHTML += storyCard;
+            });
+        }
+
+        function displayFallbackStories() {
+            const storiesGrid = document.getElementById('stories-grid');
+            storiesGrid.innerHTML = `
+                <article class="story-card">
+                    <div class="story-card-content">
+                        <h3>Idaho Family Court Hearing Exposes Systemic Corruption</h3>
+                        <p>First public hearing reveals how courts profit from prolonged custody battles...</p>
+                        <div class="story-meta">July 2025 • <a href="https://michaelvolpe.substack.com" target="_blank" style="color: #984B43;">Read on Substack →</a></div>
+                    </div>
+                </article>
+                
+                <article class="story-card">
+                    <div class="story-card-content">
+                        <h3>Arizona's Family Court Reform Success Story</h3>
+                        <p>How multiple days of public testimony led to legislative action...</p>
+                        <div class="story-meta">June 2025 • <a href="https://michaelvolpe.substack.com" target="_blank" style="color: #984B43;">Read on Substack →</a></div>
+                    </div>
+                </article>
+                
+                <article class="story-card">
+                    <div class="story-card-content">
+                        <h3>The National Movement for Family Justice</h3>
+                        <p>State-by-state analysis of family court corruption committees...</p>
+                        <div class="story-meta">May 2025 • <a href="https://michaelvolpe.substack.com" target="_blank" style="color: #984B43;">Read on Substack →</a></div>
+                    </div>
+                </article>
+            `;
+        }
+
+        // Load stories when page loads
+        document.addEventListener('DOMContentLoaded', loadSubstackStories);
     </script>
 </body>
 </html>
