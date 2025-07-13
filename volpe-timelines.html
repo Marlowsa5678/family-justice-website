@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Volpe: Career Timeline - Investigative Journalist</title>
+    <meta name="description" content="A comprehensive timeline of Michael Volpe's career-defining achievements in investigative journalism, exposing corruption and fighting for justice.">
+    <meta name="keywords" content="Michael Volpe timeline, investigative journalism achievements, corruption investigations, family court reform">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Michael Volpe: Career Timeline">
+    <meta property="og:description" content="A comprehensive timeline of achievements in investigative journalism">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://volpesvoice.com/volpe-timelines.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #18121E;
+            background: #fafafa;
+            min-height: 100vh;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: #18121E;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+        }
+        
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #984B43;
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top: 80px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            background: linear-gradient(135deg, #18121E 0%, #4682B4 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            margin: -20px -20px 40px -20px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease-out;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero .subtitle {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .hero .tagline {
+            font-size: 1.1em;
+            font-style: italic;
+            opacity: 0.8;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.95);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #18121E;
+            display: block;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            color: #666;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #18121E;
+            position: relative;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #18121E, #4682B4);
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(to bottom, #18121E, #4682B4, #984B43);
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+
+        .achievement {
+            position: relative;
+            margin: 60px 0;
+            width: 100%;
+        }
+
+        .achievement:nth-child(odd) .achievement-content {
+            margin-left: 0;
+            margin-right: 52%;
+            text-align: right;
+        }
+
+        .achievement:nth-child(even) .achievement-content {
+            margin-left: 52%;
+            margin-right: 0;
+            text-align: left;
+        }
+        
+        /* Desktop enhancements */
+        @media (min-width: 1024px) {
+            .achievement:nth-child(odd) .achievement-image {
+                float: right;
+                margin-left: 30px;
+                margin-right: 0;
+            }
+            
+            .achievement:nth-child(even) .achievement-image {
+                float: left;
+                margin-right: 30px;
+                margin-left: 0;
+            }
+            
+            .achievement-content {
+                min-height: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 4em;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.6em;
+            }
+            
+            .section-title {
+                font-size: 3em;
+            }
+        }
+
+        .achievement-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .achievement-content:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .achievement-number {
+            position: absolute;
+            top: 50%;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #18121E, #4682B4);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6em;
+            font-weight: bold;
+            transform: translateY(-50%);
+            z-index: 10;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            font-family: 'Poppins', sans-serif;
+            border: 3px solid white;
+        }
+
+        .achievement:nth-child(odd) .achievement-number {
+            right: -35px;
+        }
+
+        .achievement:nth-child(even) .achievement-number {
+            left: -35px;
+        }
+
+        .achievement-title {
+            font-size: 1.6em;
+            font-weight: 600;
+            color: #18121E;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.3;
+        }
+
+        .achievement-description {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .achievement-highlight {
+            background: linear-gradient(120deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            border-left: 5px solid #984B43;
+            font-size: 1.05em;
+        }
+
+        .achievement-highlight strong {
+            color: #984B43;
+            font-weight: 600;
+        }
+        
+        .achievement-image {
+            width: 100%;
+            max-width: 450px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+        
+        .achievement-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #18121E;
+                flex-direction: column;
+                padding: 1rem 0;
+                display: none;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .achievement:nth-child(odd) .achievement-content,
+            .achievement:nth-child(even) .achievement-content {
+                margin-left: 70px;
+                margin-right: 0;
+                text-align: left;
+            }
+
+            .achievement:nth-child(odd) .achievement-number,
+            .achievement:nth-child(even) .achievement-number {
+                left: 0;
+                right: auto;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .achievement-image {
+                height: 150px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .achievement {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .achievement:nth-child(1) { animation-delay: 0.1s; }
+        .achievement:nth-child(2) { animation-delay: 0.2s; }
+        .achievement:nth-child(3) { animation-delay: 0.3s; }
+        .achievement:nth-child(4) { animation-delay: 0.4s; }
+        .achievement:nth-child(5) { animation-delay: 0.5s; }
+        .achievement:nth-child(6) { animation-delay: 0.6s; }
+        .achievement:nth-child(7) { animation-delay: 0.7s; }
+        .achievement:nth-child(8) { animation-delay: 0.8s; }
+        .achievement:nth-child(9) { animation-delay: 0.9s; }
+        .achievement:nth-child(10) { animation-delay: 1.0s; }
+        .achievement:nth-child(11) { animation-delay: 1.1s; }
+        .achievement:nth-child(12) { animation-delay: 1.2s; }
+
+        /* Interactive Elements */
+        .cta-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #4682B4 0%, #18121E 100%);
+            border-radius: 20px;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #18121E;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            background: #984B43;
+            color: white;
+        }
+        
+        /* Scroll to top button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #18121E;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            z-index: 1000;
+            font-size: 1.2rem;
+        }
+        
+        .scroll-to-top.visible {
+            opacity: 1;
+        }
+        
+        .scroll-to-top:hover {
+            transform: translateY(-3px);
+            background: #4682B4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Volpe's Voice</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="family-justice.html">Family Justice</a></li>
+                <li><a href="volpe-timelines.html" class="active">Timeline</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Michael Volpe</h1>
+            <div class="subtitle">The Finance Executive Who Became America's Corruption Watchdog</div>
+            <div class="tagline">"Voice to the voiceless with true original reporting on topics the rest of the media is too afraid or lazy to cover"</div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-number">67</span>
+                <div class="stat-label">Federal Criminal Charges Triggered</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">$48.5M</span>
+                <div class="stat-label">In Corruption Settlements</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">31+</span>
+                <div class="stat-label">Judges Forced to Recuse</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">25+</span>
+                <div class="stat-label">Ongoing Investigation Series</div>
+            </div>
+        </div>
+
+        <!-- Timeline Section -->
+        <div class="timeline-section">
+            <h2 class="section-title">Top 12 Career-Defining Achievements</h2>
+            
+            <div class="timeline">
+                <div class="achievement">
+                    <div class="achievement-number">1</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">The Sandra Grazzini-Rucki Case: Fighting Media Bias and Judicial Corruption</h3>
+                        <img src="images/timeline/Sandra_Grazzini_Rucki_book_cover.jpg" alt="Sandra Grazzini-Rucki book cover" class="achievement-image">
+                        <p class="achievement-description">
+                            Volpe's most personal investigation, fighting against mainstream media narrative including ABC's 20/20. Co-authored definitive book exposing family court corruption when others wouldn't tell the truth.
+                        </p>
+                        <div class="achievement-highlight">
+                            <strong>Impact:</strong> Minnesota Court of Appeals overturned cruel sentence. Book became definitive resource.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-number">2</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Keith Dobbs Investigation: 67 Federal Charges and Justice for Veterans</h3>
+                        <img src="images/timeline/Keith_Dobbs_story.jpg" alt="Keith Dobbs investigation" class="achievement-image">
+                        <p class="achievement-description">
+                            2014 Daily Caller exposé of Memphis attorney stealing from vulnerable veterans triggered five-year federal investigation.
+                        </p>
+                        <div class="achievement-highlight">
+                            <strong>Impact:</strong> 67-count federal indictment, 35 victims identified, $406,533 in criminal proceeds sought.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-number">3</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Cherokee County DSS Scandal: $48.5 Million Settlement</h3>
+                        <img src="images/timeline/cherokeedss.webp" alt="Cherokee County DSS scandal" class="achievement-image">
+                        <p class="achievement-description">
+                            Exposed systemic corruption in North Carolina's Cherokee County Department of Social Services involving illegal child custody practices.
+                        </p>
+                        <div class="achievement-highlight">
+                            <strong>Impact:</strong> Multiple felony indictments, $48.5 million settlement—one of the largest corruption settlements in recent memory.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-number">4</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Dr. Anna Chacko Termination: Breaking VA Bureaucracy</h3>
+                        <img src="images/timeline/Dr Anna Chacko Story.png" alt="Dr. Anna Chacko investigation" class="achievement-image">
+                        <p class="achievement-description">
+                            2009 breakthrough story exposed systematic staff abuse at Pittsburgh VA Hospital, rare victory against VA bureaucracy.
+                        </p>
+                        <div class="achievement-highlight">
+                            <strong>Impact:</strong> Chacko terminated January 2010, established precedent for removing disruptive VA physicians.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-number">5</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Memphis VA Director Dismissed After O'Reilly Factor Coverage</h3>
+                        <img src="images/timeline/Dakota_County_Courthouse_(Nebraska)_3_center.JPG" alt="Memphis VA investigation" class="achievement-image">
+                        <p class="achievement-description">
+                            2014-2015 investigative series on Memphis VA Medical Center mismanagement caught national attention when featured on The O'Reilly Factor.
+                        </p>
+                        <div class="achievement-highlight">
+                            <strong>Impact:</strong> Hospital director dismissed, multiple department chiefs removed, $16 million in new equipment received.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-number">6</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Cardinal Wuerl Investigation: Five Years Ahead of Grand Jury</h3>
+                        <img src="images/timeline/Cardinal Wuerl investigation.png" alt="Cardinal Wuerl investigation" class="achievement-image">
+                        <p class="achievement-description">
+                            In a prescient 2013 Crime Magazine exposé, Volpe revealed Cardinal Donald Wuerl's role in covering up pedophile priests—five years before the Pennsylvania grand jury investigation.
+                        </p>
+                        <div class="achievement-highlight">
+                            <strong>Impact:</strong> Wuerl resigned as Archbishop of Washington D.C. in October 2018, multiple lawsuits filed.
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-number">7</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Army Ranger Freed from Corrupt Guardianship</h3>
+                        <img src="images/timeline/Cindy_Palmer_Cherokee_story.png" alt="Army Ranger guardianship investigation" class="achievement-image">
+                        <p class="achievement-description">
+                            Through Communities Digital News series, exposed how a 37-year-old former Army Ranger was trapped in a corrupt guardianship system.
+                        </p>
+                        <div class="achievement-highlight">
+                            <strong>Impact:</strong> Veteran freed, established legal precedent for challenging corrupt guardianships.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-number">8</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">The Elaine Pudlowski Act: Reforming Family Courts Nationwide</h3>
+                        <img src="images/timeline/Elaine Pudlowski act.png" alt="Elaine Pudlowski Act" class="achievement-image">
+                        <p class="achievement-description">
+                            Authored groundbreaking proposed legislation to eliminate rogue custody evaluators and Guardian ad Litems in family courts.
+                        </p>
+                        <div class="achievement-highlight">
+                            <strong>Impact:</strong> Influenced reform efforts in multiple states, Arizona's HB 2256 passed both legislative chambers.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-number">9</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Government Accountability Project Corruption Exposed</h3>
+                        <p class="achievement-description">
+                            Major American Conservative investigation exposed how the Government Accountability Project's legal director allegedly exploited whistleblowers.
+                        </p>
+                        <div class="achievement-highlight">
+                            <strong>Impact:</strong> Documented toxic workplace culture, financial exploitation, forced transparency in whistleblower organization.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-number">10</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Orange County "Probate Mafia" Systematic Corruption Series</h3>
+                        <p class="achievement-description">
+                            Ongoing 25+ part investigation into Orange County, California's probate system exposed network of attorneys systematically draining elderly estates.
+                        </p>
+                        <div class="achievement-highlight">
+                            <strong>Impact:</strong> Millions in stolen assets documented, judicial reforms and fee reductions implemented.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-number">11</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Rosilyn Wells Obamacare Navigator Scandal Becomes National Symbol</h3>
+                        <p class="achievement-description">
+                            October 2013 Daily Caller investigation exposed ACA navigator with outstanding arrest warrant, becoming national symbol of Obamacare problems.
+                        </p>
+                        <div class="achievement-highlight">
+                            <strong>Impact:</strong> Featured on Drudge Report, amplified by conservative politicians, highlighted security flaws in navigator program.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-number">12</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">St. Louis County Corruption Exposé Forces Judge Retirement</h3>
+                        <p class="achievement-description">
+                            Secret Zoom video of 40 corrupt Guardian ad Litems led to investigation exposing Judge Michael Burton's inappropriate emails and systematic corruption.
+                        </p>
+                        <div class="achievement-highlight">
+                            <strong>Impact:</strong> Burton retired August 2021, all 31 judges recused from case, international headlines via PJ Media coverage.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <h3>Continue Following Michael Volpe's Investigations</h3>
+            <p>Support independent investigative journalism and the fight against corruption. Subscribe to stay informed and get involved in the Family Justice Movement.</p>
+            <a href="index.html" class="cta-button">Subscribe to Volpe's Voice</a>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Scroll to top button
+        const scrollToTopBtn = document.createElement('button');
+        scrollToTopBtn.className = 'scroll-to-top';
+        scrollToTopBtn.innerHTML = '↑';
+        scrollToTopBtn.title = 'Scroll to top';
+        document.body.appendChild(scrollToTopBtn);
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Add smooth scrolling and intersection observer for animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const achievements = document.querySelectorAll('.achievement');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, observerOptions);
+
+            achievements.forEach(achievement => {
+                observer.observe(achievement);
+            });
+        });
+    </script>
+</body>
+</html>
